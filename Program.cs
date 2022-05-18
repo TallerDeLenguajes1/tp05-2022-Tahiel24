@@ -47,8 +47,6 @@ while(op!=10){
     Console.WriteLine("Desea seguir operando?(Inserte 10 para concluir): ");
     op=Convert.ToInt32(Console.ReadLine());
 }
-Console.WriteLine("-------------------Programa finalizado----------------");
-
 
 //Funciones
 double sumaO(double num1, double num2){
@@ -66,3 +64,56 @@ double productoO(double num1, double num2){
 double cocienteO(double num1, double num2){
     return num1/num2;
 }
+
+
+//Ejercicio 3: Calculadora V2
+
+double num3,num4,num5,VA,cuadrado,raiz,sen,cos,ent,maximo,minimo;
+int op2;
+Console.WriteLine("Ingrese un numero para operar: ");
+num3=Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Operacion que desea realizar?");
+op2=Convert.ToInt32(Console.ReadLine());
+
+while(op2!=10){
+    switch(op){
+        case 1:
+            VA=Math.Abs(num3);
+            Console.WriteLine("Resultado: "+VA);            
+            break;
+        case 2:
+            cuadrado=Math.Pow(num3,2);
+            Console.WriteLine("Resultado: "+cuadrado);  
+            break;
+        case 3:
+            raiz=Math.Sqrt(num3);
+            Console.WriteLine("Resultado: "+raiz);  
+            break;
+        case 4:
+            sen=Math.Sin(num3);
+            Console.WriteLine("Resultado: "+sen);  
+            break;
+        case 5:
+            cos=Math.Cos(num3);
+            Console.WriteLine("Resultado: "+cos);  
+            break;
+        case 6:
+            ent=Math.Truncate(num3);
+            Console.WriteLine("Resultado: "+ent);  
+            break;
+    }
+    Console.WriteLine("Desea seguir operando?(10 para finalizar): ");
+    op2=Convert.ToInt32(Console.ReadLine());
+}
+
+Console.WriteLine("Ingrese un numero mas: ");
+num4=Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Un numero mas: ");
+num5=Convert.ToDouble(Console.ReadLine());
+
+maximo=Math.Max(num4, num4);
+minimo=Math.Min(num4, num3);
+
+Console.WriteLine("Maximo de los numeros ingresados: "+maximo);
+Console.WriteLine("Minimo de los numeros ingresados: "+minimo);
